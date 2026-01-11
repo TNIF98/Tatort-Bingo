@@ -18,43 +18,47 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px;
+            padding: 5px;
         }
 
         .container {
             background: white;
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             width: 100%;
-            max-width: 600px;
+            max-width: 500px;
+            height: 100vh;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         h1 {
             text-align: center;
             color: #1a1a2e;
-            margin-bottom: 20px;
-            font-size: clamp(1.8em, 5vw, 2.5em);
+            margin-bottom: 10px;
+            font-size: clamp(1.4em, 4vw, 2em);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .controls {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         button {
             background: #e74c3c;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: clamp(14px, 4vw, 16px);
-            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: clamp(12px, 3vw, 14px);
+            border-radius: 6px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: bold;
-            min-height: 44px;
-            min-width: 44px;
+            min-height: 40px;
             touch-action: manipulation;
         }
 
@@ -75,28 +79,30 @@
         .bingo-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: max(5px, 1.5vw);
-            margin-bottom: 20px;
+            gap: 6px;
+            margin-bottom: 12px;
             aspect-ratio: 1;
+            width: 100%;
+            flex: 1;
+            max-height: 70vh;
         }
 
         .bingo-cell {
             background: #ecf0f1;
             border: 2px solid #bdc3c7;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: max(5px, 2vw);
-            font-size: clamp(11px, 2.5vw, 14px);
+            padding: 4px;
+            font-size: clamp(10px, 2vw, 12px);
             font-weight: bold;
             color: #2c3e50;
             transition: all 0.3s ease;
             user-select: none;
-            line-height: 1.2;
-            min-height: 44px;
+            line-height: 1.15;
             touch-action: manipulation;
             word-wrap: break-word;
             overflow-wrap: break-word;
@@ -128,10 +134,10 @@
 
         .bingo-message {
             text-align: center;
-            font-size: clamp(18px, 5vw, 24px);
+            font-size: clamp(16px, 4vw, 20px);
             font-weight: bold;
-            margin-top: 15px;
-            min-height: 30px;
+            margin-top: 8px;
+            min-height: 25px;
         }
 
         .bingo-message.show {
@@ -156,7 +162,7 @@
 
         .reset-btn {
             background: #3498db;
-            margin-top: 10px;
+            margin-top: 6px;
         }
 
         .reset-btn:hover {
@@ -165,24 +171,32 @@
 
         @media (max-width: 480px) {
             .container {
-                padding: 15px;
+                padding: 8px;
+                border-radius: 8px;
             }
 
             h1 {
-                margin-bottom: 15px;
+                margin-bottom: 8px;
             }
 
             .controls {
-                margin-bottom: 15px;
+                margin-bottom: 8px;
             }
 
             button {
-                padding: 8px 16px;
+                padding: 6px 12px;
                 width: 100%;
+                font-size: 12px;
             }
 
             .bingo-grid {
-                margin-bottom: 15px;
+                margin-bottom: 8px;
+                gap: 5px;
+            }
+
+            .bingo-cell {
+                font-size: 9px;
+                padding: 3px;
             }
         }
     </style>
@@ -231,6 +245,21 @@
             'Ohne Verstärkung unnötig in Gefahr',
             'Abgelegener Ort',
             'Luigi scheint der Täter zu sein',
+            'Ermittler im Autogespräch',
+            'Überwachungsvideo taucht auf',
+            'Verhör mit Glas Wasser',
+            'Tatort mit Kind',
+            'Verschwundene Beweise',
+            'Ermittler zitiert aus Ermittlungsakte',
+            'Kommissar:in flucht',
+            'Alibi stimmt nicht',
+            'Verdächtiger flieht',
+            'Spusi am Tatort',
+            'Anruf unterbricht Szene',
+            'Jemand wird verhaftet',
+            'Streifenwagen fährt vor',
+            'Kommissar:in rennt',
+            'Rückblick Szene'
 
         ];
 
